@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="addressBean" class="com.josh.Address">
+        <property name="city" value="Pune"/>
+        <property name="state" value="Maharashtra"/>
+        <property name="country" value="India"/>
+    </bean>
+
+    <bean id="studentBean" class="com.josh.Student">
+        <property name="firstName" value="Manasi"/>
+        <property name="lastName" value="Mane"/>
+        <property name="rollNo" value='37'/>
+        <property name="department" value="Computer Engineering"/>
+        <property name="address" ref="addressBean"/>
+
+    </bean>
+
+</beans>
